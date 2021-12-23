@@ -1,9 +1,11 @@
 /**
- * Demo
  */
 import React, { Component } from 'react';
 
-class Demo extends Component {
+type Props = {};
+type State = {};
+
+class Demo extends Component<Props, State> {
   state = {};
 
   render() {

@@ -1,9 +1,11 @@
 /**
- * Home
  */
 import React, { Component } from 'react';
 
-class Home extends Component {
+type Props = {};
+type State = {};
+
+class Home extends Component<Props, State> {
   state = {};
 
   render() {

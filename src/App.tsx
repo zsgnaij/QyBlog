@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { ReactNode} from 'react';
 import Router from './router';
 
-function App() {
+function App():ReactNode {
   return (
     <div className='App'>
       <Router></Router>
