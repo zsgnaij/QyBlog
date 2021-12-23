@@ -1,16 +1,24 @@
 /**
+ * Home
  */
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 
-type Props = {};
-type State = {};
+type Props = {}
+type State = {}
 
 class Home extends Component<Props, State> {
-  state = {};
+  state = {}
+
+  componentDidMount() {
+    console.log(
+      '[233333333]',
+      'dasoijdoiasjdojasiojdioasjdiojasoijdoisjdiojasojdoiasjdoijasiojdoiasjoidjaosjdiojasiodjioasjdiojasoidjoiasjdioasjo'
+    )
+  }
 
   render() {
-    return <div>Home</div>;
+    return <div>Home</div>
   }
 }
 
-export default Home;
+export default Home
