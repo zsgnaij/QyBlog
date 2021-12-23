@@ -20,8 +20,8 @@ module.exports = {
     ecmaVersion: 13,
     sourceType: 'module',
   },
-  plugins: ['react', '@typescript-eslint'],
+  plugins: ['react', '@typescript-eslint', 'eslint-plugin-prettier'],
   rules: {
     'max-len': ['warn', { code: 80, ignoreUrls: true }],
   },
-};
+}
