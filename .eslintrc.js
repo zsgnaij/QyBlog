@@ -22,6 +22,6 @@ module.exports = {
   },
   plugins: ['react', '@typescript-eslint', 'eslint-plugin-prettier'],
   rules: {
-    'max-len': ['warn', { code: 80, ignoreUrls: true }],
+    'max-len': ['error', { code: 80, ignoreUrls: true }],
   },
-}
+};

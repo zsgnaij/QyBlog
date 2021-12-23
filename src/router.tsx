@@ -9,9 +9,9 @@ import Home from './containers/home';
 const routerCfg = () => {
   return (
     <Routes>
-      <Route path='/home' element={<Home></Home>}></Route>
+      <Route path="/home" element={<Home></Home>}></Route>
       {/* v6 废弃 <Redirect/> 标签，可用此方法替代 */}
-      <Route path='*' element={<Navigate to='/home' />} />
+      <Route path="*" element={<Navigate to="/home" />} />
     </Routes>
   );
 };
