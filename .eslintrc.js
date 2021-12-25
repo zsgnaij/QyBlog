@@ -23,5 +23,6 @@ module.exports = {
   plugins: ['react', '@typescript-eslint', 'eslint-plugin-prettier'],
   rules: {
     'max-len': ['error', { code: 80, ignoreUrls: true }],
+    '@typescript-eslint/ban-types': 1,
   },
 };
