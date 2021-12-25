@@ -1,6 +1,6 @@
 /**
  * @flow
- *
+ * 路由配置
  */
 import React from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';

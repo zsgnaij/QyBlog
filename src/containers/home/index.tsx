@@ -2,8 +2,9 @@
  * Home
  */
 import React, { Component } from 'react';
+import './index.less';
 
-class Home extends Component<Props, State> {
+class Home extends Component {
   state = {};
 
   componentDidMount() {
@@ -11,7 +12,11 @@ class Home extends Component<Props, State> {
   }
 
   render() {
-    return <div>Home</div>;
+    return (
+      <div className="home-page">
+        <div>12</div>
+      </div>
+    );
   }
 }
 
