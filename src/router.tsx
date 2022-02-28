@@ -2,11 +2,11 @@
  * @flow
  * 路由配置
  */
-import React from 'react';
+import React, { FC } from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import Home from './containers/home';
 
-const routerCfg = () => {
+const routerCfg: FC = () => {
   return (
     <Routes>
       <Route path="/home" element={<Home></Home>}></Route>

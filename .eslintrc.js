@@ -24,6 +24,7 @@ module.exports = {
   rules: {
     'max-len': ['error', { code: 80, ignoreUrls: true }],
     '@typescript-eslint/ban-types': 'warn',
+    'react/display-name': 'off',
     'prettier/prettier': [
       'error',
       {

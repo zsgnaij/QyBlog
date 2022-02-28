@@ -9,8 +9,8 @@ class Home extends Component {
 
   render() {
     return (
-      <div className="home-page">
-        <div>12</div>
+      <div className="home">
+        <div className="home-masker"></div>
       </div>
     );
   }
