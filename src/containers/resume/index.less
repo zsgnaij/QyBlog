@@ -32,24 +32,26 @@
     margin: 0 auto;
 
     .introduction {
+      display: flex;
       font-size: 14px;
       line-height: 22px;
       min-height: 22px;
       position: relative;
       padding: 4px;
-      &:before {
-        content: '';
+
+      .introduction-i {
         position: absolute;
         top: 5px;
-        left: 2px;
-        height: calc(100% - 5px - 5px);
+        left: 5px;
         width: 4px;
+        height: calc(100% - 10px);
         background: #bbbbbb80;
         border-radius: 1.5px;
       }
 
       .introduction-content {
         padding: 0 16px;
+        margin-bottom: 8px;
       }
     }
 
@@ -95,7 +97,7 @@
     article {
       padding: 0 32px;
 
-      .qy-row{
+      .qy-row {
         margin-bottom: 12px;
       }
     }

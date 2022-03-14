@@ -22,6 +22,7 @@ class Resume extends Component {
         </header>
         <article className="main">
           <div className="introduction">
+            <div className="introduction-i" />
             <div className="introduction-content">
               性别：男
               <br />
