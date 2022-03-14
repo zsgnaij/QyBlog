@@ -22,9 +22,11 @@ module.exports = {
   },
   plugins: ['react', '@typescript-eslint', 'eslint-plugin-prettier'],
   rules: {
-    'max-len': ['error', { code: 80, ignoreUrls: true }],
+    'max-len': 'off',
     '@typescript-eslint/ban-types': 'warn',
+    '@typescript-eslint/no-empty-interface': 'warn',
     'react/display-name': 'off',
+    'react/self-closing-comp': 1,
     'prettier/prettier': [
       'error',
       {

@@ -28,7 +28,7 @@ const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin'
 
 const createEnvironmentHash = require('./webpack/persistentCache/createEnvironmentHash');
 
-// Source maps are resource heavy and can cause out of memory issue for large source files.
+// 是否生成sourceMap
 const shouldUseSourceMap = process.env.GENERATE_SOURCEMAP !== 'false';
 
 const reactRefreshRuntimeEntry = require.resolve('react-refresh/runtime');
@@ -55,7 +55,7 @@ const imageInlineSizeLimit = parseInt(
   process.env.IMAGE_INLINE_SIZE_LIMIT || '10000'
 );
 
-// Check if TypeScript is setup
+// 检查tsconfig.json是否存在
 const useTypeScript = fs.existsSync(paths.appTsConfig);
 
 // Check if Tailwind config exists
@@ -202,7 +202,6 @@ module.exports = function (webpackEnv) {
     // This means they will be the "root" imports that are included in JS bundle.
     entry: paths.appIndexJs,
     output: {
-      // The build folder.
       path: paths.appBuild,
       // Add /* filename */ comments to generated require()s in the output.
       pathinfo: isEnvDevelopment,
@@ -310,8 +309,8 @@ module.exports = function (webpackEnv) {
         .map(ext => `.${ext}`)
         .filter(ext => useTypeScript || !ext.includes('ts')),
       alias: {
-        '@src': path.resolve('src'),
-        '@assets': path.resolve('src/assets'),
+        '@src': path.resolve(__dirname, '../src'),
+        '@assets': path.resolve(__dirname, '../src/assets'),
         'react-native': 'react-native-web',
         ...(isEnvProductionProfile && {
           'react-dom$': 'react-dom/profiling',
@@ -778,8 +777,6 @@ module.exports = function (webpackEnv) {
         },
       }),
     ].filter(Boolean),
-    // Turn off performance processing because we utilize
-    // our own hints via the FileSizeReporter
     performance: false,
   };
 };
