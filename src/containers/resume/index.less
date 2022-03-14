@@ -31,31 +31,73 @@
     padding: 0 98px;
     margin: 0 auto;
 
-    .introduction{
+    .introduction {
       font-size: 14px;
       line-height: 22px;
       min-height: 22px;
       position: relative;
       padding: 4px;
-      &:before{
+      &:before {
         content: '';
         position: absolute;
         top: 5px;
         left: 2px;
         height: calc(100% - 5px - 5px);
         width: 4px;
-        background: #BBBBBB80;
+        background: #bbbbbb80;
         border-radius: 1.5px;
       }
 
-      .introduction-content{
-        padding:0 16px;
+      .introduction-content {
+        padding: 0 16px;
       }
     }
 
-    .qy-row{
+    .qy-row {
       padding: 0 6px;
       display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 32px;
+
+      .info-box {
+        code {
+          color: rgb(85, 142, 218);
+          background-color: rgba(208, 187, 193, 0.2);
+          border-radius: 4px;
+          font-size: 85%;
+          padding: 0 8px;
+          margin-left: 12px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 640px) {
+  .resume {
+    header {
+      .header-img {
+        height: 20vh;
+      }
+      .title {
+        padding: 0 32px;
+
+        .banner {
+          height: 24px;
+          margin: -24px 0 32px 0;
+        }
+
+        .title-text {
+          margin-bottom: 16px;
+        }
+      }
+    }
+    article {
+      padding: 0 32px;
+
+      .qy-row{
+        margin-bottom: 12px;
+      }
     }
   }
 }
