@@ -1,8 +1,8 @@
 @font-face {
   font-family: "iconfont"; /* Project id 3237872 */
-  src: url('iconfont.woff2?t=1647355427491') format('woff2'),
-       url('iconfont.woff?t=1647355427491') format('woff'),
-       url('iconfont.ttf?t=1647355427491') format('truetype');
+  src: url('iconfont.woff2?t=1647696854410') format('woff2'),
+       url('iconfont.woff?t=1647696854410') format('woff'),
+       url('iconfont.ttf?t=1647696854410') format('truetype');
 }
 
 .iconfont {
@@ -13,31 +13,31 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-mine:before {
-  content: "\f03e";
-}
-
-.icon-work:before {
-  content: "\e6e4";
-}
-
 .icon-phone:before {
   content: "\e604";
 }
 
-.icon-education:before {
-  content: "\f55b";
+.icon-github:before {
+  content: "\e64c";
+}
+
+.icon-mine:before {
+  content: "\e6d1";
 }
 
 .icon-project:before {
-  content: "\e692";
+  content: "\e70d";
+}
+
+.icon-education:before {
+  content: "\e711";
+}
+
+.icon-work:before {
+  content: "\e770";
 }
 
 .icon-mail:before {
   content: "\e666";
-}
-
-.icon-wechat:before {
-  content: "\e637";
 }
 

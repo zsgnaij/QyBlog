@@ -4,14 +4,14 @@
   header {
     .header-img {
       width: 100%;
-      height: 30vh;
+      height: 24vh;
       background: url(../../assets/images/resume/resume_header.jpg) no-repeat;
       background-size: 100%;
       background-position: 0% 50%;
     }
     .title {
       box-sizing: content-box;
-      max-width: 760px;
+      max-width: 800px;
       padding: 0 98px;
       margin: 0 auto;
 
@@ -27,7 +27,7 @@
   }
   article {
     box-sizing: content-box;
-    max-width: 760px;
+    max-width: 800px;
     padding: 0 98px;
     margin: 0 auto;
 
@@ -56,9 +56,7 @@
 
     .qy-row {
       padding: 0 6px;
-      display: flex;
-      flex-wrap: wrap;
-      margin: 24px 0 32px 0;
+      margin: 24px 0 24px 0;
 
       h1 {
         margin-left: 12px;
@@ -71,7 +69,27 @@
           border-radius: 4px;
           font-size: 85%;
           padding: 0 8px;
-          margin-left: 12px;
+          margin: 4px 12px 4px 0;
+        }
+      }
+
+      .content-box {
+        margin-top: 12px;
+        display: flex;
+
+        .left-col {
+          flex-basis: 0;
+          flex-grow: 0.1875;
+
+          .time-range {
+            color: rgba(55, 53, 47, 0.6);
+          }
+        }
+
+        .right-col {
+          flex-basis: 0;
+          flex-grow: 0.8125;
+          margin-left: 40px;
         }
       }
     }
@@ -96,7 +114,7 @@
 
         .banner {
           height: 24px;
-          margin: -24px 0 32px 0;
+          margin: -36px 0 32px 0;
         }
 
         .title-text {

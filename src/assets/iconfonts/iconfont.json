@@ -6,20 +6,6 @@
   "description": "",
   "glyphs": [
     {
-      "icon_id": "11783600",
-      "name": "我的",
-      "font_class": "mine",
-      "unicode": "f03e",
-      "unicode_decimal": 61502
-    },
-    {
-      "icon_id": "15892903",
-      "name": "工作台",
-      "font_class": "work",
-      "unicode": "e6e4",
-      "unicode_decimal": 59108
-    },
-    {
       "icon_id": "27841857",
       "name": "手机",
       "font_class": "phone",
@@ -27,18 +13,39 @@
       "unicode_decimal": 58884
     },
     {
-      "icon_id": "21508009",
-      "name": "教育2",
-      "font_class": "education",
-      "unicode": "f55b",
-      "unicode_decimal": 62811
+      "icon_id": "27107543",
+      "name": "logo-github-filled",
+      "font_class": "github",
+      "unicode": "e64c",
+      "unicode_decimal": 58956
     },
     {
-      "icon_id": "28101960",
-      "name": "项目",
+      "icon_id": "27756520",
+      "name": "用户",
+      "font_class": "mine",
+      "unicode": "e6d1",
+      "unicode_decimal": 59089
+    },
+    {
+      "icon_id": "27765106",
+      "name": "数据",
       "font_class": "project",
-      "unicode": "e692",
-      "unicode_decimal": 59026
+      "unicode": "e70d",
+      "unicode_decimal": 59149
+    },
+    {
+      "icon_id": "27765225",
+      "name": "教育",
+      "font_class": "education",
+      "unicode": "e711",
+      "unicode_decimal": 59153
+    },
+    {
+      "icon_id": "28212245",
+      "name": "业务",
+      "font_class": "work",
+      "unicode": "e770",
+      "unicode_decimal": 59248
     },
     {
       "icon_id": "4893453",
@@ -46,13 +53,6 @@
       "font_class": "mail",
       "unicode": "e666",
       "unicode_decimal": 58982
-    },
-    {
-      "icon_id": "6684308",
-      "name": "微信",
-      "font_class": "wechat",
-      "unicode": "e637",
-      "unicode_decimal": 58935
     }
   ]
 }
