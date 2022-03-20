@@ -311,6 +311,7 @@ module.exports = function (webpackEnv) {
       alias: {
         '@src': path.resolve(__dirname, '../src'),
         '@assets': path.resolve(__dirname, '../src/assets'),
+        '@utils': path.resolve(__dirname, '../src/utils'),
         'react-native': 'react-native-web',
         ...(isEnvProductionProfile && {
           'react-dom$': 'react-dom/profiling',
