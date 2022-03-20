@@ -104,7 +104,6 @@
     "prettier": "^2.5.1",
     "react-dev-utils": "^12.0.0",
     "react-refresh": "^0.11.0",
-    "sass-loader": "^12.3.0",
     "terser-webpack-plugin": "^5.2.5",
     "typescript": "^4.5.4",
     "web-vitals": "^2.1.2",
@@ -139,12 +138,12 @@
     },
     "transformIgnorePatterns": [
       "[/\\\\]node_modules[/\\\\].+\\.(js|jsx|mjs|cjs|ts|tsx)$",
-      "^.+\\.module\\.(css|sass|scss)$"
+      "^.+\\.module\\.(css|less|scss)$"
     ],
     "modulePaths": [],
     "moduleNameMapper": {
       "^react-native$": "react-native-web",
-      "^.+\\.module\\.(css|sass|scss)$": "identity-obj-proxy"
+      "^.+\\.module\\.(css|less|scss)$": "identity-obj-proxy"
     },
     "moduleFileExtensions": [
       "web.js",
