@@ -89,6 +89,31 @@ class Resume extends Component {
                 <use xlinkHref="#icon-work" />
               </svg>
               <h1 className="text-xl sm:text-2xl font-medium sm:font-semibold">
+                专业技能
+              </h1>
+            </div>
+            <ul>
+              <li>熟悉HTML5、CSS3、JavaScript等前端编程技术。</li>
+              <li>熟悉React框架及相关技术栈：Hooks、Redux。</li>
+              <li>熟悉微信小程序开发。</li>
+              <li>
+                了解计算机网络基础知识，熟悉TCP/IP、HTTP、WebSocket等相关网络协议。
+              </li>
+              <li>熟悉前端组件化开发和前端工程化技术。</li>
+              <li>
+                有后端开发经验，熟悉Java、NodeJS等后端语言，对MongoDB、MySQL数据库有一定的了解。
+              </li>
+              <li>
+                熟悉Linux操作系统、K8S集群管理和Docker容器管理技术，能独立部署项目至服务器。
+              </li>
+            </ul>
+          </div>
+          <div className="qy-row">
+            <div className="flex items-center">
+              <svg className="icon text-2xl sm:text-3xl" aria-hidden="true">
+                <use xlinkHref="#icon-work" />
+              </svg>
+              <h1 className="text-xl sm:text-2xl font-medium sm:font-semibold">
                 工作经历
               </h1>
             </div>
@@ -152,15 +177,25 @@ class Resume extends Component {
                 <div>Java、NodeJS后端开发、小程序开发</div>
                 <span>
                   涉及物联网智慧办公、智慧教室、平台管理和蜂巢边缘计算等项目开发。
-                  -
-                  基于create-react-app&webpack搭建项目，集成相关插件实现打包优化和版本跟踪。
-                  - 使用webpack-dev-server搭建本地开发环境
-                  ，配置proxy代理远程数据，集成mock模拟本地数据。 - 使用Antd
-                  ConfigProvider&react-intl实现项目国际化。 -
-                  使用react-router实现前端路由，使用@loadable/component实现页面懒加载。
-                  - 使用PureComponent&Memo优化代码，减少不必要的组件渲染。 -
-                  参与封装公共函数ActionReducer，(组合Redux和fetch)，实现快速注册请求方法，并将数据托管给Redux。
-                  - 根据项目需求
+                  <ul>
+                    <li>
+                      基于create-react-app&webpack搭建项目，集成相关插件实现打包优化和版本跟踪。
+                    </li>
+                    <li>
+                      使用webpack-dev-server搭建本地开发环境
+                      ，配置proxy代理远程数据，集成mock模拟本地数据。
+                    </li>
+                    <li>使用Antd ConfigProvider&react-intl实现项目国际化。</li>
+                    <li>
+                      使用react-router实现前端路由，使用@loadable/component实现页面懒加载。
+                    </li>
+                    <li>
+                      使用PureComponent&Memo优化代码，减少不必要的组件渲染。
+                    </li>
+                    <li>
+                      参与封装公共函数ActionReducer，(组合Redux和fetch)，实现快速注册请求方法，并将数据托管给Redux。
+                    </li>
+                  </ul>
                   技术栈：React、JavaScript、less、antd、webpack。
                 </span>
               </div>
@@ -177,10 +212,13 @@ class Resume extends Component {
                   IBox一体机物联网应用管理
                 </div>
                 <div>
-                  负责IBox一体机应用管理消息模板、告警中心开发。 -
-                  使用element-resize-detector实现告警卡片自适应布局。 -
-                  基于element-ui封装自定义组件SelectTree。 -
-                  使用vue-router管理前端路由。 - 使用vuex管理数据。
+                  负责IBox一体机应用管理消息模板、告警中心开发
+                  <ul>
+                    <li>使用element-resize-detector实现告警卡片自适应布局。</li>
+                    <li>基于element-ui封装自定义组件SelectTree。</li>
+                    <li>使用vue-router管理前端路由。</li>
+                    <li>使用vuex管理数据。</li>
+                  </ul>
                   技术栈：Vue2、JavaScript、less、element-ui、webpack。
                 </div>
               </div>
@@ -197,9 +235,13 @@ class Resume extends Component {
                   H3C小物精灵、智慧办公、智慧空间小程序
                 </div>
                 <div>
-                  H3C小物精灵、智慧办公、智慧空间小程序开发。 -
-                  移植物联网设备运维页面至小程序，实现小程序段的设备管理以及设备工勘的需求。
-                  - 实现 - 封装自定义组件SpaceTree，实现小程序端的空间树选择。
+                  H3C小物精灵、智慧办公、智慧空间小程序开发。
+                  <ul>
+                    <li>
+                      移植物联网设备运维页面至小程序，实现小程序段的设备管理以及设备工勘的需求。
+                    </li>
+                    <li>封装自定义组件SpaceTree，实现小程序端的空间树选择。</li>
+                  </ul>
                   技术栈：JavaScript、Echarts、HTML5、CSS3、WEUI。
                 </div>
               </div>
@@ -214,10 +256,14 @@ class Resume extends Component {
               <div className="right-col">
                 <div className="text-xl font-medium">Java、Nodejs后端开发</div>
                 <div>
-                  涉及物联网智慧办公、小程序websocket代理服务和账户权限管理。 -
-                  负责公司后台业务开发以及虚拟机、数据库性能优化。 -
-                  负责公司小程序代理服务器开发，使用websocket协议实现无公网IP服务器与小程序的通信，包括Java
-                  Netty版本和NodeJS版本。
+                  涉及物联网智慧办公、小程序websocket代理服务和账户权限管理。
+                  <ul>
+                    <li>负责公司后台业务开发以及虚拟机、数据库性能优化。</li>
+                    <li>
+                      负责公司小程序代理服务器开发，使用websocket协议实现无公网IP服务器与小程序的通信，包括Java
+                      Netty版本和NodeJS版本。
+                    </li>
+                  </ul>
                   技术栈：Java、NodeJS、MongoDB、K8S、Docker、MySQL、HTML5、CSS3、JQuery。
                 </div>
               </div>

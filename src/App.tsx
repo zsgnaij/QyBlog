@@ -1,9 +1,10 @@
 import React from 'react';
 import Router from './router';
+import Layout from './components/layout';
 import 'tailwindcss/tailwind.css';
 
-function App() {
-  return <Router></Router>;
-}
-
-export default App;
+export default () => (
+  <Layout>
+    <Router />
+  </Layout>
+);
