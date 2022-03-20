@@ -1,8 +1,8 @@
 @font-face {
   font-family: "iconfont"; /* Project id 3237872 */
-  src: url('iconfont.woff2?t=1647696854410') format('woff2'),
-       url('iconfont.woff?t=1647696854410') format('woff'),
-       url('iconfont.ttf?t=1647696854410') format('truetype');
+  src: url('iconfont.woff2?t=1647778792548') format('woff2'),
+       url('iconfont.woff?t=1647778792548') format('woff'),
+       url('iconfont.ttf?t=1647778792548') format('truetype');
 }
 
 .iconfont {
@@ -14,7 +14,11 @@
 }
 
 .icon-phone:before {
-  content: "\e604";
+  content: "\e650";
+}
+
+.icon-work:before {
+  content: "\e76d";
 }
 
 .icon-github:before {
@@ -33,7 +37,7 @@
   content: "\e711";
 }
 
-.icon-work:before {
+.icon-skill:before {
   content: "\e770";
 }
 

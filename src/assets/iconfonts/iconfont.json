@@ -6,11 +6,18 @@
   "description": "",
   "glyphs": [
     {
-      "icon_id": "27841857",
+      "icon_id": "3816143",
       "name": "手机",
       "font_class": "phone",
-      "unicode": "e604",
-      "unicode_decimal": 58884
+      "unicode": "e650",
+      "unicode_decimal": 58960
+    },
+    {
+      "icon_id": "28211500",
+      "name": "企业和个人",
+      "font_class": "work",
+      "unicode": "e76d",
+      "unicode_decimal": 59245
     },
     {
       "icon_id": "27107543",
@@ -43,7 +50,7 @@
     {
       "icon_id": "28212245",
       "name": "业务",
-      "font_class": "work",
+      "font_class": "skill",
       "unicode": "e770",
       "unicode_decimal": 59248
     },

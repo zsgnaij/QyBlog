@@ -16,9 +16,7 @@ class Resume extends Component {
           <div className="header-img" />
           <div className="title">
             <div className="banner" />
-            <div className="title-text text-2xl sm:text-3xl font-medium sm:font-semibold">
-              个人简历
-            </div>
+            <h1 className="title-text">个人简历</h1>
           </div>
         </header>
         <article className="main">
@@ -35,13 +33,13 @@ class Resume extends Component {
           <div className="qy-row">
             <div className="flex flex-wrap">
               <div className="info-box flex w-full min-w-full md:w-1/3 md:min-w-1/3 items-center">
-                <svg className="icon text-2xl" aria-hidden="true">
+                <svg className="icon" aria-hidden="true">
                   <use xlinkHref="#icon-phone" />
                 </svg>
                 <code className="h-6 leading-6">18057950097</code>
               </div>
               <div className="info-box flex w-full min-w-full md:w-1/3 md:min-w-1/3 items-center">
-                <svg className="icon text-2xl" aria-hidden="true">
+                <svg className="icon" aria-hidden="true">
                   <use xlinkHref="#icon-github" />
                 </svg>
                 <code className="h-6 leading-6">
@@ -55,7 +53,7 @@ class Resume extends Component {
                 </code>
               </div>
               <div className="info-box flex w-full min-w-full md:w-1/3 md:min-w-1/3 items-center">
-                <svg className="icon text-2xl" aria-hidden="true">
+                <svg className="icon" aria-hidden="true">
                   <use xlinkHref="#icon-mail" />
                 </svg>
                 <code className="h-6 leading-6">18057950097@163.com</code>
@@ -64,118 +62,107 @@ class Resume extends Component {
           </div>
           <div className="qy-row">
             <div className="flex items-center">
-              <svg className="icon text-2xl sm:text-3xl" aria-hidden="true">
+              <svg className="icon" aria-hidden="true">
                 <use xlinkHref="#icon-education" />
               </svg>
-              <h1 className="text-xl sm:text-2xl font-medium sm:font-semibold">
-                教育
-              </h1>
+              <h2>教育</h2>
             </div>
+            <hr />
             <div className="content-box">
               <div className="left-col">
-                <div className="text-base sm:text-xl font-medium sm:font-semibold">
-                  2013-2017
-                </div>
+                <h3>2017</h3>
+                <div className="time-range">2013.9-2017.7</div>
               </div>
               <div className="right-col">
-                <div className="text-xl font-medium">重庆科技学院</div>
-                <div>机械电子工程 本科</div>
+                <h4>重庆科技学院</h4>
+                <div className="content-wrap">机械电子工程 本科</div>
               </div>
             </div>
           </div>
           <div className="qy-row">
             <div className="flex items-center">
-              <svg className="icon text-2xl sm:text-3xl" aria-hidden="true">
+              <svg className="icon" aria-hidden="true">
+                <use xlinkHref="#icon-skill" />
+              </svg>
+              <h2>专业技能</h2>
+            </div>
+            <hr />
+            <div className="content-wrap">
+              <ul>
+                <li>熟悉HTML5、CSS3、JavaScript等前端编程技术。</li>
+                <li>熟悉React框架及相关技术栈：Hooks、Redux。</li>
+                <li>熟悉微信小程序开发。</li>
+                <li>
+                  了解计算机网络基础知识，熟悉TCP/IP、HTTP、WebSocket等相关网络协议。
+                </li>
+                <li>熟悉前端组件化开发和前端工程化技术。</li>
+                <li>
+                  有后端开发经验，熟悉Java、NodeJS等后端语言，对MongoDB、MySQL数据库有一定的了解。
+                </li>
+                <li>
+                  熟悉Linux操作系统、K8S集群管理和Docker容器管理技术，能独立部署项目至服务器。
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div className="qy-row">
+            <div className="flex items-center">
+              <svg className="icon" aria-hidden="true">
                 <use xlinkHref="#icon-work" />
               </svg>
-              <h1 className="text-xl sm:text-2xl font-medium sm:font-semibold">
-                专业技能
-              </h1>
+              <h2>工作经历</h2>
             </div>
-            <ul>
-              <li>熟悉HTML5、CSS3、JavaScript等前端编程技术。</li>
-              <li>熟悉React框架及相关技术栈：Hooks、Redux。</li>
-              <li>熟悉微信小程序开发。</li>
-              <li>
-                了解计算机网络基础知识，熟悉TCP/IP、HTTP、WebSocket等相关网络协议。
-              </li>
-              <li>熟悉前端组件化开发和前端工程化技术。</li>
-              <li>
-                有后端开发经验，熟悉Java、NodeJS等后端语言，对MongoDB、MySQL数据库有一定的了解。
-              </li>
-              <li>
-                熟悉Linux操作系统、K8S集群管理和Docker容器管理技术，能独立部署项目至服务器。
-              </li>
-            </ul>
-          </div>
-          <div className="qy-row">
-            <div className="flex items-center">
-              <svg className="icon text-2xl sm:text-3xl" aria-hidden="true">
-                <use xlinkHref="#icon-work" />
-              </svg>
-              <h1 className="text-xl sm:text-2xl font-medium sm:font-semibold">
-                工作经历
-              </h1>
-            </div>
+            <hr />
             <div className="content-box">
               <div className="left-col">
-                <div className="text-base sm:text-xl font-medium sm:font-semibold">
-                  2022
-                </div>
-                <div className="text-sm time-range">2020.01-至今</div>
+                <h3>2022</h3>
+                <div className="time-range">2020.01-至今</div>
               </div>
               <div className="right-col">
-                <div className="text-xl font-medium">新华三技术有限公司</div>
-                <div>Web前端开发、小程序开发</div>
+                <h4>新华三技术有限公司</h4>
+                <div className="content-wrap">Web前端开发、小程序开发</div>
               </div>
             </div>
             <div className="content-box">
               <div className="left-col">
-                <div className="text-base sm:text-xl font-medium sm:font-semibold">
-                  2020
-                </div>
-                <div className="text-sm time-range">2019.01-2020.01</div>
+                <h3>2020</h3>
+                <div className="time-range">2019.01-2020.01</div>
               </div>
               <div className="right-col">
-                <div className="text-xl font-medium">新华三技术有限公司</div>
-                <div>Java、NodeJS后端开发、小程序开发</div>
+                <h4>新华三技术有限公司</h4>
+                <div className="content-wrap">
+                  Java、NodeJS后端开发、小程序开发
+                </div>
               </div>
             </div>
             <div className="content-box">
               <div className="left-col">
-                <div className="text-base sm:text-xl font-medium sm:font-semibold">
-                  2018
-                </div>
-                <div className="text-sm time-range">2017.09-2018.12</div>
+                <h3>2018</h3>
+                <div className="time-range">2017.09-2018.12</div>
               </div>
               <div className="right-col">
-                <div className="text-xl font-medium">
-                  浙江光合太阳能科技有限公司
-                </div>
-                <div>Java后端开发</div>
+                <h4>浙江光合太阳能科技有限公司</h4>
+                <div className="content-wrap">Java后端开发</div>
               </div>
             </div>
           </div>
           <div className="qy-row">
             <div className="flex items-center">
-              <svg className="icon text-2xl sm:text-3xl" aria-hidden="true">
+              <svg className="icon" aria-hidden="true">
                 <use xlinkHref="#icon-project" />
               </svg>
-              <h1 className="text-xl sm:text-2xl font-medium sm:font-semibold">
-                项目经历
-              </h1>
+              <h2>项目经历</h2>
             </div>
+            <hr />
             <div className="content-box">
               <div className="left-col">
-                <div className="text-base sm:text-xl font-medium sm:font-semibold">
-                  2022
-                </div>
-                <div className="text-sm time-range">2020.01-至今</div>
+                <h3>2022</h3>
+                <div className="time-range">2020.01-至今</div>
               </div>
               <div className="right-col">
-                <div className="text-xl font-medium">H3C物联网平台</div>
+                <h4>H3C物联网平台</h4>
                 <div>Java、NodeJS后端开发、小程序开发</div>
-                <span>
+                <div className="content-wrap">
                   涉及物联网智慧办公、智慧教室、平台管理和蜂巢边缘计算等项目开发。
                   <ul>
                     <li>
@@ -197,21 +184,17 @@ class Resume extends Component {
                     </li>
                   </ul>
                   技术栈：React、JavaScript、less、antd、webpack。
-                </span>
+                </div>
               </div>
             </div>
             <div className="content-box">
               <div className="left-col">
-                <div className="text-base sm:text-xl font-medium sm:font-semibold">
-                  2021
-                </div>
-                <div className="text-sm time-range">2020.11-2021.03</div>
+                <h3>2021</h3>
+                <div className="time-range">2020.11-2021.03</div>
               </div>
               <div className="right-col">
-                <div className="text-xl font-medium">
-                  IBox一体机物联网应用管理
-                </div>
-                <div>
+                <h4>IBox一体机物联网应用管理</h4>
+                <div className="content-wrap">
                   负责IBox一体机应用管理消息模板、告警中心开发
                   <ul>
                     <li>使用element-resize-detector实现告警卡片自适应布局。</li>
@@ -225,16 +208,12 @@ class Resume extends Component {
             </div>
             <div className="content-box">
               <div className="left-col">
-                <div className="text-base sm:text-xl font-medium sm:font-semibold">
-                  2021
-                </div>
-                <div className="text-sm time-range">2019.04-2021.10</div>
+                <h3>2021</h3>
+                <div className="time-range">2019.04-2021.10</div>
               </div>
               <div className="right-col">
-                <div className="text-xl font-medium">
-                  H3C小物精灵、智慧办公、智慧空间小程序
-                </div>
-                <div>
+                <h4>H3C小物精灵、智慧办公、智慧空间小程序</h4>
+                <div className="content-wrap">
                   H3C小物精灵、智慧办公、智慧空间小程序开发。
                   <ul>
                     <li>
@@ -248,14 +227,12 @@ class Resume extends Component {
             </div>
             <div className="content-box">
               <div className="left-col">
-                <div className="text-base sm:text-xl font-medium sm:font-semibold">
-                  2020
-                </div>
-                <div className="text-sm time-range">2017.09-2020.01</div>
+                <h3>2020</h3>
+                <div className="time-range">2017.09-2020.01</div>
               </div>
               <div className="right-col">
-                <div className="text-xl font-medium">Java、Nodejs后端开发</div>
-                <div>
+                <h4>Java、Nodejs后端开发</h4>
+                <div className="content-wrap">
                   涉及物联网智慧办公、小程序websocket代理服务和账户权限管理。
                   <ul>
                     <li>负责公司后台业务开发以及虚拟机、数据库性能优化。</li>
@@ -271,13 +248,12 @@ class Resume extends Component {
           </div>
           <div className="qy-row">
             <div className="flex items-center">
-              <svg className="icon text-2xl sm:text-3xl" aria-hidden="true">
+              <svg className="icon" aria-hidden="true">
                 <use xlinkHref="#icon-mine" />
               </svg>
-              <h1 className="text-xl sm:text-2xl font-medium sm:font-semibold">
-                个人
-              </h1>
+              <h2>个人</h2>
             </div>
+            <hr />
           </div>
         </article>
       </div>
