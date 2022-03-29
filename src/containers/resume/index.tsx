@@ -1,11 +1,9 @@
 /**
  * 个人简历
  */
-import React, { Component } from 'react';
-import ResumeReducer from '@src/redux/resumeReducer';
+import { Component } from 'react';
 import '@assets/iconfonts/iconfont.css';
 import '@assets/iconfonts/iconfont.js';
-import injectReducer from '@utils/injectReducer';
 import './index.less';
 class Resume extends Component {
   state = {};
@@ -262,4 +260,4 @@ class Resume extends Component {
   }
 }
 
-export default injectReducer({ key: '2333', reducer: ResumeReducer })(Resume);
+export default Resume;

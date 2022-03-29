@@ -1,7 +1,7 @@
 /**
  * Home
  */
-import React, { Component } from 'react';
+import { Component } from 'react';
 import './index.less';
 
 class Home extends Component {
@@ -10,7 +10,7 @@ class Home extends Component {
   render() {
     return (
       <div className="home">
-        <div className="home-masker"></div>
+        <div className="home-masker" />
       </div>
     );
   }

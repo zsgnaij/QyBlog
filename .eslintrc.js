@@ -34,5 +34,6 @@ module.exports = {
       },
     ],
     '@typescript-eslint/no-empty-function': 'off',
+    'react/react-in-jsx-scope': 'off',
   },
 };

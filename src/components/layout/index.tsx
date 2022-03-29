@@ -2,7 +2,7 @@
  * @flow
  *
  */
-import React, { ReactChildren, ReactNode } from 'react';
+import { ReactChildren, ReactNode } from 'react';
 import TopScroll from '../topScroll';
 
 interface Props {

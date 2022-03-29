@@ -1,7 +1,7 @@
 /**
  * 路由配置
  */
-import React, { FC } from 'react';
+import { FC } from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import Resume from './containers/resume/index';
 import Home from './containers/home';
