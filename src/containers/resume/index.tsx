@@ -89,10 +89,14 @@ class Resume extends Component {
             <div className="content-wrap">
               <ul>
                 <li>熟悉HTML5、CSS3、JavaScript等前端编程技术。</li>
-                <li>熟悉React框架及相关技术栈：Hooks、Redux。</li>
+                <li>熟悉浏览器工作原理。</li>
+                <li>
+                  熟悉React框架及相关技术栈：Hooks、Redux，了解react
+                  Concurrent模式和Fiber架构。
+                </li>
                 <li>熟悉微信小程序开发。</li>
                 <li>
-                  了解计算机网络基础知识，熟悉TCP/IP、HTTP、WebSocket等相关网络协议。
+                  了解计算机网络基础知识，熟悉TCP、HTTP、WebSocket等相关网络协议。
                 </li>
                 <li>熟悉前端组件化开发和前端工程化技术。</li>
                 <li>
@@ -160,7 +164,6 @@ class Resume extends Component {
               </div>
               <div className="right-col">
                 <h4>H3C物联网平台</h4>
-                <div>Java、NodeJS后端开发、小程序开发</div>
                 <div className="content-wrap">
                   涉及物联网智慧办公、智慧教室、平台管理和蜂巢边缘计算等项目开发。
                   <ul>
@@ -179,10 +182,13 @@ class Resume extends Component {
                       使用PureComponent&Memo优化代码，减少不必要的组件渲染。
                     </li>
                     <li>
-                      参与封装公共函数ActionReducer，(组合Redux和fetch)，实现快速注册请求方法，并将数据托管给Redux。
+                      参与封装公共函数ActionReducer，(组合Redux和fetch)，实现快速注册请求方法，并将数据托管给Redux，结合immerjs确保数据的不可变性。
+                    </li>
+                    <li>
+                      封装动态表单列组件ColumnsControl、复合筛选组件FilterPanel、视频播放组件WebrtcVideo、文件列表组件FileListView等公共组件。
                     </li>
                   </ul>
-                  技术栈：React、JavaScript、less、antd、webpack。
+                  技术栈：React、JavaScript、less、antd、webpack、immerjs、tailwindCSS。
                 </div>
               </div>
             </div>
@@ -216,7 +222,7 @@ class Resume extends Component {
                   H3C小物精灵、智慧办公、智慧空间小程序开发。
                   <ul>
                     <li>
-                      移植物联网设备运维页面至小程序，实现小程序段的设备管理以及设备工勘的需求。
+                      移植物联网设备运维页面至小程序，实现小程序端设备管理以及设备工勘的需求。
                     </li>
                     <li>封装自定义组件SpaceTree，实现小程序端的空间树选择。</li>
                   </ul>
