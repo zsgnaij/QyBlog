@@ -1,13 +1,13 @@
 /**
  * Top scroll
  */
-import { useEffect, useState } from 'react';
+import { ReactElement, useEffect, useState } from 'react';
 import './index.less';
 
-export default () => {
+export default (): ReactElement => {
   const [percent, setPercent] = useState<number>(0);
 
-  const changePercent = () => {
+  const changePercent = (): void => {
     // 整个页面高度
     const vH: number =
       document.documentElement.scrollHeight || document.body.scrollHeight;

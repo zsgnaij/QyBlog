@@ -24,7 +24,7 @@ module.exports = {
   rules: {
     'max-len': 'off',
     '@typescript-eslint/ban-types': 'warn',
-    '@typescript-eslint/no-empty-interface': 'warn',
+    '@typescript-eslint/no-empty-interface': 'off',
     'react/display-name': 'off',
     'react/self-closing-comp': 1,
     'prettier/prettier': [

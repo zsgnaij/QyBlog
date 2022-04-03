@@ -1,13 +1,11 @@
 /**
  * 个人简历
  */
-import { Component } from 'react';
+import { PureComponent } from 'react';
 import '@assets/iconfonts/iconfont.css';
 import '@assets/iconfonts/iconfont.js';
 import './index.less';
-class Resume extends Component {
-  state = {};
-
+class Resume extends PureComponent {
   render() {
     return (
       <div className="resume">

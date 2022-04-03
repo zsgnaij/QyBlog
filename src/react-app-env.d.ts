@@ -1,7 +1,5 @@
 /*eslint-disable */
 /// <reference types="node" />
-/// <reference types="react/experimental" />
-/// <reference types="react-dom/experimental" />
 
 declare namespace NodeJS {
   interface ProcessEnv {
@@ -9,6 +7,8 @@ declare namespace NodeJS {
     readonly PUBLIC_URL: string;
   }
 }
+
+declare module 'react-dom/client'
 
 declare module '*.avif' {
   const src: string;
