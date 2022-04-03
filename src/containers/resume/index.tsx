@@ -2,10 +2,16 @@
  * 个人简历
  */
 import { PureComponent } from 'react';
+import { Link } from 'react-router-dom';
+import { route_base } from '@utils/env';
 import '@assets/iconfonts/iconfont.css';
 import '@assets/iconfonts/iconfont.js';
 import './index.less';
-class Resume extends PureComponent {
+
+interface Props {}
+
+interface State {}
+class Resume extends PureComponent<Props, State> {
   render() {
     return (
       <div className="resume">
@@ -89,8 +95,13 @@ class Resume extends PureComponent {
                 <li>熟悉HTML5、CSS3、JavaScript等前端编程技术。</li>
                 <li>熟悉浏览器工作原理。</li>
                 <li>
-                  熟悉React框架及相关技术栈：Hooks、Redux，了解react
-                  Concurrent模式和Fiber架构。
+                  熟悉React框架及相关技术栈：Hooks、Redux，了解
+                  <Link to={`${route_base}/demo`}>
+                    <span style={{ textDecoration: 'underline' }}>
+                      Concurrent模式
+                    </span>
+                  </Link>
+                  和Fiber架构。
                 </li>
                 <li>熟悉微信小程序开发。</li>
                 <li>

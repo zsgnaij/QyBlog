@@ -136,26 +136,28 @@ class ConcurrentDemo extends PureComponent<Props, State> {
     const { showClock } = this.state;
     const data = this.getStreamData(this.state.value);
     return (
-      <div className="container">
-        <div className="rendering">
-          {this.renderOption('sync', 'Synchronous')}
-          {this.renderOption('setTimeout', 'SetTimeout')}
-          {this.renderOption('debounced', 'Debounced')}
-          {this.renderOption('throttle', 'Throttle')}
-          {this.renderOption('async', 'Concurrent')}
-        </div>
-        <input
-          style={{ color: '#000' }}
-          className={'input ' + this.state.strategy}
-          placeholder="longer input → more components and DOM nodes"
-          onChange={this.handleChange}
-        />
-        <div className="demo" onClick={this.handleChartClick}>
-          {this.state.showDemo && (
-            <Charts data={data} onClick={this.handleChartClick} />
-          )}
-          <div style={{ display: showClock ? 'block' : 'none' }}>
-            <Clock />
+      <div className="concurrent-demo">
+        <div className="container">
+          <div className="rendering">
+            {this.renderOption('sync', 'Synchronous')}
+            {this.renderOption('setTimeout', 'SetTimeout')}
+            {this.renderOption('debounced', 'Debounced')}
+            {this.renderOption('throttle', 'Throttle')}
+            {this.renderOption('async', 'Concurrent')}
+          </div>
+          <input
+            style={{ color: '#000' }}
+            className={'input ' + this.state.strategy}
+            placeholder="longer input → more components and DOM nodes"
+            onChange={this.handleChange}
+          />
+          <div className="demo" onClick={this.handleChartClick}>
+            {this.state.showDemo && (
+              <Charts data={data} onClick={this.handleChartClick} />
+            )}
+            <div style={{ display: showClock ? 'block' : 'none' }}>
+              <Clock />
+            </div>
           </div>
         </div>
       </div>
