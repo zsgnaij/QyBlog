@@ -69,7 +69,7 @@ export default class Clock extends PureComponent {
   }
 
   componentWillUnmount() {
-    this.faceRef.current.removeEventListener('click', this.handleClick);
+    this.faceRef.current?.removeEventListener('click', this.handleClick);
     if (this.frame) {
       cancelAnimationFrame(this.frame);
     }
