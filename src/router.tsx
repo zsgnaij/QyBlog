@@ -4,12 +4,13 @@
 import { FC, lazy, Suspense } from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import { route_base } from '@utils/env';
+import Loading from '@components/loading';
 const Resume = lazy(() => import('./containers/resume/index'));
 const Home = lazy(() => import('./containers/home'));
 const ConcurrentDemo = lazy(() => import('./containers/concurrentDemo'));
 
 const routerCfg: FC = () => (
-  <Suspense fallback={<div>loading...</div>}>
+  <Suspense fallback={<Loading />}>
     <Routes>
       <Route path={`${route_base}/home`} element={<Home />} />
       <Route path={`${route_base}/resume`} element={<Resume />} />
