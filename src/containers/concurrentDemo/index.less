@@ -21,27 +21,27 @@
   .rendering {
     margin-top: 20px;
     margin-bottom: 20px;
-  }
 
-  label {
-    margin-right: 40px;
-    font-size: 20px;
-  }
+    label {
+      margin-right: 40px;
+      font-size: 20px;
+    }
 
-  label.selected {
-    font-weight: bold;
-  }
+    label.selected {
+      font-weight: bold;
+    }
 
-  label:nth-child(1).selected {
-    color: rgb(253, 25, 153);
-  }
+    label:nth-child(1).selected {
+      color: rgb(253, 25, 153);
+    }
 
-  label:nth-child(2).selected {
-    color: rgb(255, 240, 1);
-  }
+    label:nth-child(2).selected {
+      color: rgb(255, 240, 1);
+    }
 
-  label:nth-child(3).selected {
-    color: #61dafb;
+    label:nth-child(3).selected {
+      color: #61dafb;
+    }
   }
 
   .chart {
@@ -124,5 +124,16 @@
     width: 5%;
     background-color: red;
     transform-origin: bottom center;
+  }
+
+  @media (max-width: 640px) {
+    .rendering {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .input {
+      font-size: 16px;
+    }
   }
 }

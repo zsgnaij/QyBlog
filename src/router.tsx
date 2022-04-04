@@ -1,7 +1,7 @@
 /**
  * 路由配置
  */
-import { FC, lazy, Suspense } from 'react';
+import { FC, lazy, ReactElement, Suspense } from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import { route_base } from '@utils/env';
 import Loading from '@components/loading';
@@ -9,7 +9,7 @@ const Resume = lazy(() => import('./containers/resume/index'));
 const Home = lazy(() => import('./containers/home'));
 const ConcurrentDemo = lazy(() => import('./containers/concurrentDemo'));
 
-const routerCfg: FC = () => (
+const routerCfg: FC = (): ReactElement => (
   <Suspense fallback={<Loading />}>
     <Routes>
       <Route path={`${route_base}/home`} element={<Home />} />
