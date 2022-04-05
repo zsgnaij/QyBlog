@@ -5,26 +5,30 @@ import { PureComponent } from 'react';
 import { Link } from 'react-router-dom';
 import { route_base } from '@utils/env';
 import ThemeSwitch from '@components/ThemeSwitch';
+import { Dispatch } from 'redux';
 import { connect } from 'react-redux';
 import { switchTheme } from '@redux/themeReducer';
 import './index.less';
 
-interface Props {
-  theme: string;
-  switchTheme: (payload: string) => void;
+interface IProps {
+  theme?: string;
+  switchTheme?: (payload: string) => void;
 }
-@connect(
+
+const withConnect: any = connect(
   state => state,
-  (dispatch: any) => ({
+  (dispatch: Dispatch) => ({
     switchTheme: (theme: string) => {
       dispatch(switchTheme(theme));
     },
   })
-)
-class Resume extends PureComponent<Props, any> {
-  handleChange = (checked: boolean) => {
+);
+
+@withConnect
+class Resume extends PureComponent<IProps> {
+  handleChange = (checked: boolean): void => {
     const { switchTheme } = this.props;
-    switchTheme(checked ? 'dark' : 'light');
+    switchTheme?.(checked ? 'dark' : 'light');
   };
 
   render() {
@@ -33,12 +37,21 @@ class Resume extends PureComponent<Props, any> {
     return (
       <div className="resume">
         <header>
-          <div className="header-img" />
+          <div
+            className="header-img"
+            style={{
+              backgroundImage: `url(${require(`@assets/images/resume/bg_${theme}.png`)})`,
+              backgroundRepeat: 'no-repeat',
+            }}
+          />
           <div className="title">
             <div className="banner" />
-            <h1 className="title-text flex items-center justify-between">
+            <h1 className="title-content flex items-center justify-between">
               个人简历
-              <ThemeSwitch onChange={this.handleChange} />
+              <ThemeSwitch
+                checked={theme === 'dark'}
+                onChange={this.handleChange}
+              />
             </h1>
           </div>
         </header>
@@ -63,7 +76,7 @@ class Resume extends PureComponent<Props, any> {
               </div>
               <div className="info-box flex w-full min-w-full md:w-1/3 md:min-w-1/3 items-center">
                 <svg className="icon" aria-hidden="true">
-                  <use xlinkHref="#icon-github" />
+                  <use xlinkHref={`#icon-github-${theme}`} />
                 </svg>
                 <code className="h-6 leading-6">
                   <a
@@ -117,7 +130,9 @@ class Resume extends PureComponent<Props, any> {
                 <li>
                   熟悉React框架及相关技术栈：Hooks、Redux，了解
                   <Link to={`${route_base}/demo`}>
-                    <span style={{ textDecoration: 'underline' }}>
+                    <span
+                      style={{ textDecoration: 'underline', margin: '0 1px' }}
+                    >
                       Concurrent模式
                     </span>
                   </Link>

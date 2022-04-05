@@ -1,13 +1,10 @@
 /**
  * 主题切换
  */
-import { Switch } from 'antd';
+import { ReactElement } from 'react';
+import { Switch, SwitchProps } from 'antd';
 
-interface Props {
-  onChange: (checked: boolean) => void;
-}
-
-export default (props: Props) => (
+export default (props: SwitchProps): ReactElement => (
   <Switch
     {...props}
     checkedChildren={<i className="iconfont icon-lightMode" />}

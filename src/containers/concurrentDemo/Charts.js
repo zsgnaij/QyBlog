@@ -11,13 +11,13 @@ import {
 
 const colors = ['#fff489', '#fa57c1', '#b166cc', '#7572ff', '#69a6f9'];
 
-interface Props {
+interface IProps {
   data: Array;
 }
 
 interface State {}
 
-export default class Charts extends PureComponent<Props, State> {
+export default class Charts extends PureComponent<IProps, State> {
   render() {
     const { data: streamData } = this.props;
     return (

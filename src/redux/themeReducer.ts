@@ -1,7 +1,7 @@
 import { createAction } from 'redux-actions';
 import { produce } from 'immer';
 
-interface state {
+export interface ThemeState {
   theme: string;
 }
 
@@ -10,10 +10,13 @@ interface action {
   payload: string | any;
 }
 
-export default function (state: state = { theme: 'light' }, action: action) {
+export default function (
+  state: ThemeState = { theme: 'light' },
+  action: action
+) {
   switch (action.type) {
     case 'THEME':
-      return produce(state, (draft: state) => {
+      return produce(state, (draft: ThemeState) => {
         draft.theme = action.payload;
       });
     default:

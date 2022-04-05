@@ -6,6 +6,20 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "16579611",
+      "name": "GitHub",
+      "font_class": "github-light",
+      "unicode": "e601",
+      "unicode_decimal": 58881
+    },
+    {
+      "icon_id": "13654983",
+      "name": "GitHub",
+      "font_class": "github-dark",
+      "unicode": "e602",
+      "unicode_decimal": 58882
+    },
+    {
       "icon_id": "1518941",
       "name": "月亮",
       "font_class": "darkMode",
@@ -32,13 +46,6 @@
       "font_class": "work",
       "unicode": "e76d",
       "unicode_decimal": 59245
-    },
-    {
-      "icon_id": "27107543",
-      "name": "logo-github-filled",
-      "font_class": "github",
-      "unicode": "e64c",
-      "unicode_decimal": 58956
     },
     {
       "icon_id": "27756520",
