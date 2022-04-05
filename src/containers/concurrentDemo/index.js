@@ -31,8 +31,8 @@ class ConcurrentDemo extends PureComponent<Props, State> {
     const multiplier = input.length !== 0 ? input.length : 1;
     const complexity =
       (parseInt(window.location.search.substring(1), 10) / 100) * 25 || 25;
-    const data = _.range(5).map((t) =>
-      _.range(complexity * multiplier).map((j) => {
+    const data = _.range(5).map(t =>
+      _.range(complexity * multiplier).map(j => {
         return {
           x: j,
           y: (t + 1) * _.random(0, 255),
@@ -44,17 +44,17 @@ class ConcurrentDemo extends PureComponent<Props, State> {
   }
 
   componentDidMount() {
-    window.addEventListener('keydown', (e) => {
+    window.addEventListener('keydown', e => {
       if (e.key.toLowerCase() === '?') {
         e.preventDefault();
-        this.setState((state) => ({
+        this.setState(state => ({
           showClock: !state.showClock,
         }));
       }
     });
   }
 
-  handleChartClick = (e) => {
+  handleChartClick = e => {
     if (this.state.showDemo) {
       if (e.shiftKey) {
         this.setState({ showDemo: false });
@@ -62,7 +62,7 @@ class ConcurrentDemo extends PureComponent<Props, State> {
       return;
     }
     if (this.state.strategy !== 'async') {
-      this.setState((state) => ({
+      this.setState(state => ({
         showDemo: !state.showDemo,
       }));
       return;
@@ -76,13 +76,13 @@ class ConcurrentDemo extends PureComponent<Props, State> {
     });
   };
 
-  debouncedHandleChange = _.debounce((value) => {
+  debouncedHandleChange = _.debounce(value => {
     if (this.state.strategy === 'debounced') {
       this.setState({ value: value });
     }
   }, 1000);
 
-  throttleHandleChange = _.throttle((value) => {
+  throttleHandleChange = _.throttle(value => {
     if (this.state.strategy === 'throttle') {
       this.setState({ value: value });
     }
@@ -104,7 +104,7 @@ class ConcurrentDemo extends PureComponent<Props, State> {
     );
   }
 
-  handleChange = (e) => {
+  handleChange = e => {
     const value = e.target.value;
     const { strategy } = this.state;
     switch (strategy) {

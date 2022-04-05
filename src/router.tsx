@@ -4,7 +4,7 @@
 import { FC, lazy, ReactElement, Suspense } from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import { route_base } from '@utils/env';
-import Loading from '@components/loading';
+import Loading from '@src/components/Loading';
 const Resume = lazy(() => import('./containers/resume/index'));
 const Home = lazy(() => import('./containers/home'));
 const ConcurrentDemo = lazy(() => import('./containers/concurrentDemo'));

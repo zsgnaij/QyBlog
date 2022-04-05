@@ -51,7 +51,7 @@ export default class Charts extends PureComponent<Props, State> {
               size={6}
               style={{
                 data: {
-                  fill: (d) => colors[d.x % 5],
+                  fill: d => colors[d.x % 5],
                 },
               }}
             />
@@ -85,7 +85,7 @@ export default class Charts extends PureComponent<Props, State> {
               data={streamData[0]}
               style={{
                 data: {
-                  fill: (d) => colors[d.x % 5],
+                  fill: d => colors[d.x % 5],
                   stroke: 'none',
                   padding: 5,
                 },

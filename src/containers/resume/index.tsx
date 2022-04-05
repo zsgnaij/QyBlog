@@ -4,22 +4,42 @@
 import { PureComponent } from 'react';
 import { Link } from 'react-router-dom';
 import { route_base } from '@utils/env';
-import '@assets/iconfonts/iconfont.css';
-import '@assets/iconfonts/iconfont.js';
+import ThemeSwitch from '@components/ThemeSwitch';
+import { connect } from 'react-redux';
+import { switchTheme } from '@redux/themeReducer';
 import './index.less';
 
-interface Props {}
+interface Props {
+  theme: string;
+  switchTheme: (payload: string) => void;
+}
+@connect(
+  state => state,
+  (dispatch: any) => ({
+    switchTheme: (theme: string) => {
+      dispatch(switchTheme(theme));
+    },
+  })
+)
+class Resume extends PureComponent<Props, any> {
+  handleChange = (checked: boolean) => {
+    const { switchTheme } = this.props;
+    switchTheme(checked ? 'dark' : 'light');
+  };
 
-interface State {}
-class Resume extends PureComponent<Props, State> {
   render() {
+    const { theme } = this.props;
+
     return (
       <div className="resume">
         <header>
           <div className="header-img" />
           <div className="title">
             <div className="banner" />
-            <h1 className="title-text">个人简历</h1>
+            <h1 className="title-text flex items-center justify-between">
+              个人简历
+              <ThemeSwitch onChange={this.handleChange} />
+            </h1>
           </div>
         </header>
         <article className="main">

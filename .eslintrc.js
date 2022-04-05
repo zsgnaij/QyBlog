@@ -31,6 +31,7 @@ module.exports = {
       'error',
       {
         endOfLine: 'auto',
+        arrowParens: 'avoid',
       },
     ],
     '@typescript-eslint/no-empty-function': 'off',

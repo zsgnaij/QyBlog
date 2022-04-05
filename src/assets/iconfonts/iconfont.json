@@ -6,6 +6,20 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "1518941",
+      "name": "月亮",
+      "font_class": "darkMode",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "4480004",
+      "name": "日间模式",
+      "font_class": "lightMode",
+      "unicode": "e626",
+      "unicode_decimal": 58918
+    },
+    {
       "icon_id": "3816143",
       "name": "手机",
       "font_class": "phone",

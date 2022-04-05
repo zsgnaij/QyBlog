@@ -1,13 +1,21 @@
-import { ReactChildren, ReactElement, ReactNode } from 'react';
-import TopScroll from '../topScroll';
+import { ReactChildren, ReactElement } from 'react';
+import TopScroll from '../TopScroll';
+import { useSelector } from 'react-redux';
+import './index.less';
 
 interface Props {
-  children: ReactChildren | ReactNode;
+  children: ReactChildren | ReactElement;
 }
 
-export default ({ children }: Props): ReactElement => (
-  <div className="basic-layout">
-    <TopScroll />
-    {children}
-  </div>
-);
+export default ({ children }: Props): ReactElement => {
+  const { theme } = useSelector(state => {
+    return state;
+  });
+
+  return (
+    <div className={`${theme}-theme basic-layout`}>
+      <TopScroll />
+      {children}
+    </div>
+  );
+};
