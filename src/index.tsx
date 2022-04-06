@@ -5,8 +5,10 @@ import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 import { printVersion } from '@utils/version';
 import { Provider } from 'react-redux';
-import store from './store';
+import configureStore from './utils/store';
 import App from './App';
+
+const store = configureStore();
 
 const rootNode = document.getElementById('root');
 const rootElement = (

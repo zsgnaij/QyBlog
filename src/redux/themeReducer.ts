@@ -5,14 +5,14 @@ export interface ThemeState {
   theme: string;
 }
 
-interface action {
+interface ThemeAction {
   type: string;
   payload: string | any;
 }
 
 export default function (
   state: ThemeState = { theme: 'light' },
-  action: action
+  action: ThemeAction
 ) {
   switch (action.type) {
     case 'THEME':

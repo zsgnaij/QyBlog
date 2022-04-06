@@ -7,7 +7,8 @@ import { route_base } from '@utils/env';
 import ThemeSwitch from '@components/ThemeSwitch';
 import { Dispatch } from 'redux';
 import { connect } from 'react-redux';
-import { switchTheme } from '@redux/themeReducer';
+import themeReducer, { switchTheme } from '@redux/themeReducer';
+import injectReducer from '@src/utils/injectReducer';
 import './index.less';
 
 interface IProps {
@@ -15,8 +16,14 @@ interface IProps {
   switchTheme?: (payload: string) => void;
 }
 
+interface IStore {
+  themeReducer: {
+    theme: string;
+  };
+}
+
 const withConnect: any = connect(
-  state => state,
+  ({ themeReducer }: IStore) => ({ ...themeReducer }),
   (dispatch: Dispatch) => ({
     switchTheme: (theme: string) => {
       dispatch(switchTheme(theme));
@@ -25,6 +32,7 @@ const withConnect: any = connect(
 );
 
 @withConnect
+@injectReducer({ key: 'themeReducer', reducer: themeReducer })
 class Resume extends PureComponent<IProps> {
   handleChange = (checked: boolean): void => {
     const { switchTheme } = this.props;
@@ -32,7 +40,7 @@ class Resume extends PureComponent<IProps> {
   };
 
   render() {
-    const { theme } = this.props;
+    const { theme = 'light' } = this.props;
 
     return (
       <div className="resume">
