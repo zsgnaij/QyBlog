@@ -23,5 +23,5 @@
       "@redux/*":["./src/redux/*"]
     }
   },
-  "include": ["src"]
+  "include": ["src/**/*"]
 }

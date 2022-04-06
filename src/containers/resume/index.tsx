@@ -71,6 +71,8 @@ class Resume extends PureComponent<IProps> {
               <br />
               籍贯：浙江金华
               <br />
+              意向：前端开发
+              <br />
               细节控，逻辑思维能力强。
             </div>
           </div>
@@ -155,7 +157,7 @@ class Resume extends PureComponent<IProps> {
                   有后端开发经验，熟悉Java、NodeJS等后端语言，对MongoDB、MySQL数据库有一定的了解。
                 </li>
                 <li>
-                  熟悉Linux操作系统、K8S集群管理和Docker容器管理技术，能独立部署项目至服务器。
+                  熟悉Linux操作系统、Docker容器管理技术，能独立部署项目至服务器。
                 </li>
               </ul>
             </div>
@@ -220,19 +222,20 @@ class Resume extends PureComponent<IProps> {
                   涉及物联网智慧办公、智慧教室、平台管理和蜂巢边缘计算等项目开发。
                   <ul>
                     <li>
-                      基于create-react-app&webpack搭建项目，集成相关插件实现打包优化和版本跟踪。
+                      基于create-react-app和webpack搭建项目，集成相关插件实现打包优化和版本跟踪。
                     </li>
                     <li>
                       使用webpack-dev-server搭建本地开发环境
                       ，配置proxy代理远程数据，集成mock模拟本地数据。
                     </li>
-                    <li>使用Antd ConfigProvider&react-intl实现项目国际化。</li>
+                    <li>使用Antd ConfigProvider和react-intl实现项目国际化。</li>
                     <li>
-                      使用react-router实现前端路由，使用@loadable/component实现页面懒加载。
+                      使用react-router实现前端路由，使用@loadable/component和React.lazy实现页面懒加载。
                     </li>
                     <li>
-                      使用PureComponent&Memo优化代码，减少不必要的组件渲染。
+                      使用PureComponent和Memo优化代码，减少不必要的组件渲染。
                     </li>
+                    <li>封装函数injectReducer，实现Redux store动态注入。</li>
                     <li>
                       参与封装公共函数ActionReducer，(组合Redux和fetch)，实现快速注册请求方法，并将数据托管给Redux，结合immerjs确保数据的不可变性。
                     </li>
@@ -303,7 +306,7 @@ class Resume extends PureComponent<IProps> {
               </div>
             </div>
           </div>
-          {/* <div className="qy-row">
+          <div className="qy-row">
             <div className="flex items-center">
               <svg className="icon" aria-hidden="true">
                 <use xlinkHref="#icon-mine" />
@@ -311,7 +314,10 @@ class Resume extends PureComponent<IProps> {
               <h2>个人</h2>
             </div>
             <hr />
-          </div> */}
+          </div>
+          <p style={{ textIndent: '2em', fontSize: 15 }}>
+            有较好的团队协作和沟通能力，善于协作。有较强的学习能力和探索精神，喜欢尝试新的技术。
+          </p>
         </article>
       </div>
     );
