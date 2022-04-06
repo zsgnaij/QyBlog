@@ -11,7 +11,7 @@ export interface IStore extends Store {
  * @param initialState 初始状态
  * @param initialReducers 初始reducer对象，以{key:reducer}的形式定义
  */
-export default function configureStore(
+function configureStore(
   initialState: any = {},
   initialReducers: any = state => state
 ): IStore {
@@ -28,3 +28,5 @@ export default function configureStore(
 
   return store;
 }
+
+export default configureStore();

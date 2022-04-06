@@ -1,14 +1,9 @@
 import { PureComponent, ReactNode } from 'react';
-import { ReactReduxContext, ReactReduxContextValue } from 'react-redux';
 import hoistNonReactStatics from 'hoist-non-react-statics';
-import { IStore } from '@utils/store';
+import store from '@utils/store';
 
 interface IProps {
   store: any;
-}
-
-interface IReactReduxContextValue extends ReactReduxContextValue {
-  store: IStore;
 }
 
 const injectReducer: any =
@@ -17,12 +12,7 @@ const injectReducer: any =
     class ReducerInjector extends PureComponent<IProps> {
       constructor(props) {
         super(props);
-        <ReactReduxContext.Consumer>
-          {({ store }: IReactReduxContextValue) => {
-            store.injectReducer(key, reducer);
-            return null;
-          }}
-        </ReactReduxContext.Consumer>;
+        store.injectReducer(key, reducer);
       }
 
       static WrappedComponent = WrappedComponent;

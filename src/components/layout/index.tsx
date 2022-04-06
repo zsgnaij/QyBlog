@@ -8,16 +8,17 @@ interface IProps {
   children: ReactChildren | ReactElement;
 }
 
+interface IStore {
+  themeReducer: ThemeState;
+}
+
 export default ({ children }: IProps): ReactElement => {
-  const { theme }: { theme: string } = useSelector<
-    ThemeState,
-    { theme: string }
-  >(state => {
-    return state;
-  });
+  const { theme }: { theme: string } = useSelector<IStore, { theme: string }>(
+    ({ themeReducer }) => ({ ...themeReducer })
+  );
 
   return (
-    <div className={`${theme}-theme basic-layout`}>
+    <div className={`${theme || 'light'}-theme basic-layout`}>
       <TopScroll />
       {children}
     </div>
