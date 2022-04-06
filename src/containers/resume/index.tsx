@@ -303,7 +303,7 @@ class Resume extends PureComponent<IProps> {
               </div>
             </div>
           </div>
-          <div className="qy-row">
+          {/* <div className="qy-row">
             <div className="flex items-center">
               <svg className="icon" aria-hidden="true">
                 <use xlinkHref="#icon-mine" />
@@ -311,7 +311,7 @@ class Resume extends PureComponent<IProps> {
               <h2>个人</h2>
             </div>
             <hr />
-          </div>
+          </div> */}
         </article>
       </div>
     );

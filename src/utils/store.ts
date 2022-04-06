@@ -15,8 +15,14 @@ function configureStore(
   initialState: any = {},
   initialReducers: any = state => state
 ): IStore {
+  const { __REDUX_DEVTOOLS_EXTENSION_COMPOSE__: devCompose } = window;
+  const composeEnhancers = devCompose ? devCompose : compose;
   const store = <IStore>(
-    createStore(initialReducers, initialState, applyMiddleware(thunk))
+    createStore(
+      initialReducers,
+      initialState,
+      composeEnhancers(applyMiddleware(thunk))
+    )
   );
   store.injectedReducers = {
     ...initialReducers,
