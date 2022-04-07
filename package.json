@@ -1,6 +1,6 @@
 {
   "name": "qy-blog",
-  "version": "v0.1.0",
+  "version": "v0.1.1",
   "private": true,
   "scripts": {
     "start": "node scripts/start.js",
