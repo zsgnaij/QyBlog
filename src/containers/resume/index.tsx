@@ -3,6 +3,7 @@
  */
 import { PureComponent } from 'react';
 import { Link } from 'react-router-dom';
+import { Row, Col } from 'antd';
 import { route_base } from '@utils/env';
 import ThemeSwitch from '@components/ThemeSwitch';
 import { Dispatch } from 'redux';
@@ -67,13 +68,23 @@ class Resume extends PureComponent<IProps> {
           <div className="introduction">
             <div className="introduction-i" />
             <div className="introduction-content">
-              性别：男
-              <br />
-              籍贯：浙江金华
-              <br />
-              意向：前端开发
-              <br />
-              细节控，逻辑思维能力强。
+              <Row>
+                <Col sm={24} xs={12}>
+                  姓名：姜舒震
+                </Col>
+                <Col sm={24} xs={12}>
+                  性别：男
+                </Col>
+                <Col sm={24} xs={12}>
+                  籍贯：浙江金华
+                </Col>
+                <Col sm={24} xs={12}>
+                  意向：前端开发
+                </Col>
+                <Col sm={24} xs={24}>
+                  细节控，逻辑思维能力强。
+                </Col>
+              </Row>
             </div>
           </div>
           <div className="qy-row">
