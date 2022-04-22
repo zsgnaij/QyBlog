@@ -23,6 +23,8 @@ interface IStore {
   };
 }
 
+injectReducer({ key: 'themeReducer', reducer: themeReducer });
+
 const withConnect: any = connect(
   ({ themeReducer }: IStore) => ({ ...themeReducer }),
   (dispatch: Dispatch) => ({
@@ -31,9 +33,7 @@ const withConnect: any = connect(
     },
   })
 );
-
 @withConnect
-@injectReducer({ key: 'themeReducer', reducer: themeReducer })
 class Resume extends PureComponent<IProps> {
   handleChange = (checked: boolean): void => {
     const { switchTheme } = this.props;
@@ -69,20 +69,23 @@ class Resume extends PureComponent<IProps> {
             <div className="introduction-i" />
             <div className="introduction-content">
               <Row>
-                <Col sm={24} xs={12}>
+                <Col sm={12} xs={12}>
                   姓名：姜舒震
                 </Col>
-                <Col sm={24} xs={12}>
+                <Col sm={124} xs={12}>
                   性别：男
                 </Col>
-                <Col sm={24} xs={12}>
-                  籍贯：浙江金华
+                <Col sm={12} xs={12}>
+                  现居：杭州市滨江区
                 </Col>
-                <Col sm={24} xs={12}>
-                  意向：前端开发
+                <Col sm={12} xs={12}>
+                  生日：1994.08.23
                 </Col>
-                <Col sm={24} xs={24}>
-                  细节控，逻辑思维能力强。
+                <Col sm={12} xs={12}>
+                  求职意向：前端开发
+                </Col>
+                <Col sm={12} xs={12}>
+                  工作年限：3年
                 </Col>
               </Row>
             </div>
@@ -147,7 +150,6 @@ class Resume extends PureComponent<IProps> {
             <div className="content-wrap">
               <ul>
                 <li>熟悉HTML5、CSS3、JavaScript等前端编程技术。</li>
-                <li>熟悉浏览器工作原理。</li>
                 <li>
                   熟悉React框架及相关技术栈：Hooks、Redux，了解
                   <Link to={`${route_base}/demo`}>
@@ -157,15 +159,16 @@ class Resume extends PureComponent<IProps> {
                       Concurrent模式
                     </span>
                   </Link>
-                  和Fiber架构。
+                  和Fiber架构，有一定的源码阅读经验。
                 </li>
-                <li>熟悉微信小程序开发。</li>
+                <li>熟悉微信小程序，能独立完成小程序的开发及上线。</li>
+                <li>熟悉浏览器工作原理，有性能优化、兼容性处理的经验。</li>
                 <li>
-                  了解计算机网络基础知识，熟悉TCP、HTTP、WebSocket等相关网络协议。
+                  了解计算机网络基础知识，熟悉相关网络协议及网络安全性问题。
                 </li>
                 <li>熟悉前端组件化开发和前端工程化技术。</li>
                 <li>
-                  有后端开发经验，熟悉Java、NodeJS等后端语言，对MongoDB、MySQL数据库有一定的了解。
+                  有后端开发经验，熟悉Java、NodeJS，对MongoDB、MySQL数据库有一定的了解。
                 </li>
                 <li>
                   熟悉Linux操作系统、Docker容器管理技术，能独立部署项目至服务器。
@@ -188,7 +191,14 @@ class Resume extends PureComponent<IProps> {
               </div>
               <div className="right-col">
                 <h4>新华三技术有限公司</h4>
-                <div className="content-wrap">Web前端开发、小程序开发</div>
+                <div className="content-wrap">
+                  <ul>
+                    <li>负责物联网平台、智慧园区前端页面、小程序开发。</li>
+                    <li>配置Eslint、prettier、husky统一代码规范。</li>
+                    <li>参与Webpack性能优化配置。</li>
+                    <li>参与项目国际化以及主题切换。</li>
+                  </ul>
+                </div>
               </div>
             </div>
             <div className="content-box">
@@ -199,7 +209,13 @@ class Resume extends PureComponent<IProps> {
               <div className="right-col">
                 <h4>新华三技术有限公司</h4>
                 <div className="content-wrap">
-                  Java、NodeJS后端开发、小程序开发
+                  <ul>
+                    <li>
+                      负责公司小程序、小程序代理服务器以及智慧办公后台业务开发。
+                    </li>
+                    <li>参与公司后台服务性能优化。</li>
+                    <li>完成后端服务的部署与上线。</li>
+                  </ul>
                 </div>
               </div>
             </div>
@@ -210,7 +226,9 @@ class Resume extends PureComponent<IProps> {
               </div>
               <div className="right-col">
                 <h4>浙江光合太阳能科技有限公司</h4>
-                <div className="content-wrap">Java后端开发</div>
+                <div className="content-wrap">
+                  负责公司服务Java后端开发，负责公司网站页面的搭建。
+                </div>
               </div>
             </div>
           </div>
@@ -228,77 +246,121 @@ class Resume extends PureComponent<IProps> {
                 <div className="time-range">2020.01-至今</div>
               </div>
               <div className="right-col">
-                <h4>H3C物联网平台</h4>
+                <h4>H3C蜂巢边缘系统</h4>
                 <div className="content-wrap">
-                  涉及物联网智慧办公、智慧教室、平台管理和蜂巢边缘计算等项目开发。
                   <ul>
                     <li>
-                      基于create-react-app和webpack搭建项目，集成相关插件实现打包优化和版本跟踪。
+                      负责边缘计算接入设备、应用管理以及函数计算功能开发。
                     </li>
                     <li>
-                      使用webpack-dev-server搭建本地开发环境
-                      ，配置proxy代理远程数据，集成mock模拟本地数据。
-                    </li>
-                    <li>使用Antd ConfigProvider和react-intl实现项目国际化。</li>
-                    <li>
-                      使用react-router实现前端路由，使用@loadable/component和React.lazy实现页面懒加载。
+                      使用React-router和RenderProps渲染列表子页面，确保同模块页面跳转保留筛选和分页信息。
                     </li>
                     <li>
-                      使用PureComponent和Memo优化代码，减少不必要的组件渲染。
+                      封装自定义组件EnhancedTable和EnhancedTab，实现动态自定义的列表和标签页切换。
+                    </li>
+                    <li>
+                      封装自定义组件FilterPanel，结合后端数据实现动态联合筛选。
                     </li>
                     <li>封装函数injectReducer，实现Redux store动态注入。</li>
-                    <li>
-                      参与封装公共函数ActionReducer，(组合Redux和fetch)，实现快速注册请求方法，并将数据托管给Redux，结合immerjs确保数据的不可变性。
-                    </li>
-                    <li>
-                      封装动态表单列组件ColumnsControl、复合筛选组件FilterPanel、视频播放组件WebrtcVideo、文件列表组件FileListView等公共组件。
-                    </li>
                   </ul>
-                  技术栈：React、JavaScript、less、antd、webpack、immerjs、tailwindCSS。
                 </div>
               </div>
             </div>
             <div className="content-box">
               <div className="left-col">
                 <h3>2021</h3>
-                <div className="time-range">2020.11-2021.03</div>
+                <div className="time-range">2021.08-2022.01</div>
               </div>
               <div className="right-col">
-                <h4>IBox一体机物联网应用管理</h4>
+                <h4>物联网智慧教室</h4>
                 <div className="content-wrap">
-                  负责IBox一体机应用管理消息模板、告警中心开发
                   <ul>
-                    <li>使用element-resize-detector实现告警卡片自适应布局。</li>
-                    <li>基于element-ui封装自定义组件SelectTree。</li>
-                    <li>使用vue-router管理前端路由。</li>
-                    <li>使用vuex管理数据。</li>
-                  </ul>
-                  技术栈：Vue2、JavaScript、less、element-ui、webpack。
-                </div>
-              </div>
-            </div>
-            <div className="content-box">
-              <div className="left-col">
-                <h3>2021</h3>
-                <div className="time-range">2019.04-2021.10</div>
-              </div>
-              <div className="right-col">
-                <h4>H3C小物精灵、智慧办公、智慧空间小程序</h4>
-                <div className="content-wrap">
-                  H3C小物精灵、智慧办公、智慧空间小程序开发。
-                  <ul>
+                    <li>负责智慧教室教室巡视、统计分析和智能运维页面开发。</li>
                     <li>
-                      移植物联网设备运维页面至小程序，实现小程序端设备管理以及设备工勘的需求。
+                      封装自定义组件WebrtcVideo、实现Webrtc视频流在线播放。
                     </li>
-                    <li>封装自定义组件SpaceTree，实现小程序端的空间树选择。</li>
+                    <li>
+                      实现视频流循环轮播功能，摄像头列表支持1，4，9宫格切换和全屏展示。
+                    </li>
+                    <li>
+                      封装自定义组件VideoController，实现在浏览器端控制摄像头。
+                    </li>
+                    <li>
+                      参与封装请求注册函数ActionReducer，组合Redux和fetch，结合immerjs确保数据的不可变性。
+                    </li>
                   </ul>
-                  技术栈：JavaScript、Echarts、HTML5、CSS3、WEUI。
                 </div>
               </div>
             </div>
             <div className="content-box">
               <div className="left-col">
                 <h3>2020</h3>
+                <div className="time-range">2020.04-2021.07</div>
+              </div>
+              <div className="right-col">
+                <h4>IBox物联网平台</h4>
+                <div className="content-wrap">
+                  <ul>
+                    <li>
+                      负责物联网平台网关管理、消息模板和告警中心页面开发。
+                    </li>
+                    <li>实现T320网关基本信息展示和高级设备配置。</li>
+                    <li>使用element-resize-detector实现告警卡片自适应布局。</li>
+                    <li>
+                      封装自定义组件RemoteShell，实现在浏览器端直接向设备下发指令。
+                    </li>
+                    <li>
+                      封装自定义Hook
+                      useCompositeState，模拟Class组件的setState方法。
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div className="content-box">
+              <div className="left-col">
+                <h3>2020</h3>
+                <div className="time-range">2020.01-2020.06</div>
+              </div>
+              <div className="right-col">
+                <h4>智慧办公&小物智慧空间小程序</h4>
+                <div className="content-wrap">
+                  <ul>
+                    <li>展示设备设备基本信息，状态和电量相关信息。</li>
+                    <li>支持在小程序端给设备下发指令，控制设备开关报警等。</li>
+                    <li>
+                      封装自定义组件SpaceTree，实现空间树的功能，分级展示空间下的设备，支持点击空间路径跳转空间。
+                    </li>
+                    <li>
+                      实现小程序端空间情景策略配置，满足条件时触发设备相关功能。
+                    </li>
+                    <li>使用echarts图表展示各设备电量使用情况。</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div className="content-box">
+              <div className="left-col">
+                <h3>2019</h3>
+                <div className="time-range">2019.04-2019.08</div>
+              </div>
+              <div className="right-col">
+                <h4>H3C小物精灵小程序</h4>
+                <div className="content-wrap">
+                  <ul>
+                    <li>实现小程序端场所管理和设备运维功能。</li>
+                    <li>使用echarts图表展示各设备流量和告警统计。</li>
+                    <li>使用腾讯地图展示设备的地理位置。</li>
+                    <li>
+                      实现设备工勘功能，通过终端采集设备信号，展示设备丢包率和信号分布。
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div className="content-box">
+              <div className="left-col">
+                <h3>2017</h3>
                 <div className="time-range">2017.09-2020.01</div>
               </div>
               <div className="right-col">
