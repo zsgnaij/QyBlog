@@ -6,29 +6,33 @@ interface IProps {
   store: any;
 }
 
-const injectReducer: any =
-  ({ key, reducer }) =>
-  WrappedComponent => {
-    class ReducerInjector extends PureComponent<IProps> {
-      constructor(props) {
-        super(props);
-        store.injectReducer(key, reducer);
-      }
+// const injectReducer: any =
+//   ({ key, reducer }) =>
+//   WrappedComponent => {
+//     class ReducerInjector extends PureComponent<IProps> {
+//       constructor(props) {
+//         super(props);
+//         store.injectReducer(key, reducer);
+//       }
 
-      static WrappedComponent = WrappedComponent;
+//       static WrappedComponent = WrappedComponent;
 
-      // 定义在开发者工具中的组件名称
-      static displayName = `withReducer(${
-        WrappedComponent.displayName || WrappedComponent.name || 'Component'
-      })`;
+//       // 定义在开发者工具中的组件名称
+//       static displayName = `withReducer(${
+//         WrappedComponent.displayName || WrappedComponent.name || 'Component'
+//       })`;
 
-      render(): ReactNode {
-        return <WrappedComponent {...this.props} />;
-      }
-    }
+//       render(): ReactNode {
+//         return <WrappedComponent {...this.props} />;
+//       }
+//     }
 
-    // 拷贝源组件的静态属性
-    return hoistNonReactStatics(ReducerInjector, WrappedComponent);
-  };
+//     // 拷贝源组件的静态属性
+//     return hoistNonReactStatics(ReducerInjector, WrappedComponent);
+//   };
+
+const injectReducer: any = ({ key, reducer }) => {
+  store.injectReducer(key, reducer);
+};
 
 export default injectReducer;
